@@ -20,7 +20,7 @@ SECRET_KEY  = os.getenv("AURA_SECRET_KEY", "aura-3g2b-orchestron-secret-2025")
 ALGORITHM   = "HS256"
 TOKEN_EXPIRE_MINUTES = 60 * 8   # 8-hour sessions
 
-pwd_context   = CryptContext(schemes=["bcrypt"], deprecated="auto")
+pwd_context   = CryptContext(schemes=["sha256_crypt"], deprecated="auto")
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/token")
 
 # ─── MOCK USER STORE ──────────────────────────────────────────────────────────

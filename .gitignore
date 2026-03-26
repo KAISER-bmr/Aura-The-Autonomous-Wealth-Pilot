@@ -34,3 +34,5 @@ Thumbs.db
 # Secrets
 *.pem
 *.key
+
+venv/
